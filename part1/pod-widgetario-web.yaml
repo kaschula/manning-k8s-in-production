@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: widgetario-web
+  labels:
+    name: widgetario-web
+spec:
+  containers:
+  - name: widgetario-web
+    image: widgetario/web:21.03
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
